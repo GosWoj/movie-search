@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { API_ENDPOINT } from "./context";
+
 const missingImg =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
@@ -49,9 +50,9 @@ const SingleMovie = () => {
       <img src={Poster === "N/A" ? missingImg : Poster} alt={Title} />
       <div className="single-movie-info">
         <h2>{Title}</h2>
-        <h3>Directed by {Director}</h3>
+        <h3>{Director === "N/A" ? null : `Directed by ${Director}`}</h3>
         <h4>Released on {Released}</h4>
-        <p>{Plot}</p>
+        <p>{Plot === "N/A" ? "No information about the plot" : Plot}</p>
         <Link to="/" className="btn">
           Back to search
         </Link>

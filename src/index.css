@@ -260,16 +260,6 @@ Single Movie
   margin-top: 1.5rem;
   line-height: 1.8;
 }
-.btn {
-  text-transform: capitalize;
-  padding: 0.25rem 0.5rem;
-  background: var(--clr-primary-5);
-  color: var(--clr-white);
-  border-radius: var(--radius);
-  display: inline-block;
-  margin-top: 0.5rem;
-  letter-spacing: var(--spacing);
-}
 @media screen and (min-width: 992px) {
   .single-movie {
     grid-template-columns: 1fr 2fr;
@@ -300,19 +290,14 @@ Buttons
 */
 .btn {
   text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
   background: var(--clr-primary-5);
   color: var(--clr-white);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  display: block;
-  transition: var(--transition);
-  font-size: 0.875rem;
-  border: 2px solid var(--clr-primary-5);
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
-  width: 40%;
-  margin: 3rem auto;
+  display: inline-block;
+  margin-top: 0.5rem;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
 }
 .btn:hover {
   color: var(--clr-primary-5);
