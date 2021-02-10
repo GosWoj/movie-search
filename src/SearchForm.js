@@ -2,10 +2,15 @@ import React from "react";
 import { useGlobalContext } from "./context";
 
 const SearchForm = () => {
-  const { query, setQuery, error } = useGlobalContext();
+  const { query, setQuery, error, setPage } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+
+  const handleInput = (e) => {
+    setQuery(e.target.value);
+    setPage(1);
   };
 
   return (
@@ -15,7 +20,7 @@ const SearchForm = () => {
         type="text"
         className="form-input"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInput}
       />
       {error.show && <div className="error">{error.message}</div>}
     </form>
